@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppTime</string>
+    <string name="channel_monitor_name">Usage Monitor</string>
+    <string name="channel_monitor_desc">Monitors app usage in the background</string>
+    <string name="channel_alarm_name">Alarm Alerts</string>
+    <string name="channel_alarm_desc">Alerts when app usage limits are reached</string>
+</resources>

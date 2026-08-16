@@ -1,0 +1,21 @@
+# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+app/build/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.keystore
+
+# Node (web prototype)
+node_modules/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+-keep class com.apptime.data.db.** { *; }
+-keep class com.apptime.data.datastore.** { *; }
