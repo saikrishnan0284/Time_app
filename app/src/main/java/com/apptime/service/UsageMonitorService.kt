@@ -53,6 +53,8 @@ class UsageMonitorService : Service() {
     }
 
     private suspend fun checkAlarms() {
+        val dataStore = SettingsDataStore(this)
+        if (!dataStore.serviceEnabledFlow.first()) return
         val dao = AppTimeDatabase.getInstance(this).alarmDao()
         val helper = AppUsageHelper(this)
         if (!helper.hasUsagePermission()) return

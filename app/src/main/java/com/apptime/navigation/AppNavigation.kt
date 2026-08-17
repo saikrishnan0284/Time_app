@@ -63,7 +63,10 @@ fun AppNavigation(settingsVm: SettingsViewModel) {
             androidx.compose.ui.Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {
-                HomeScreen(vm = homeVm)
+                HomeScreen(
+                    vm = homeVm,
+                    onOpenSettings = { navController.navigate(Screen.Settings.route) }
+                )
             }
             composable(Screen.Alarms.route) {
                 AlarmScreen(
@@ -84,7 +87,13 @@ fun AppNavigation(settingsVm: SettingsViewModel) {
                 )
             }
             composable(Screen.Settings.route) {
-                SettingsScreen(vm = settingsVm)
+                SettingsScreen(
+                    vm = settingsVm,
+                    onNavigateToAppManagement = { navController.navigate(Screen.AppManagement.route) }
+                )
+            }
+            composable(Screen.AppManagement.route) {
+                AppManagementScreen(vm = settingsVm, onBack = { navController.popBackStack() })
             }
         }
     }
